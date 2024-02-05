@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+      </style>
+    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico">
+    <title>Broadway Ranking</title>
+</head>
+<body>
+    <h1 id="heading">Alex's Broadway Shows</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="new-shows">
+                    <h3>Add New Show</h3>
+                    <form id="new-show-form" action="/" method="post">
+                        <div class="form-group needs-validation novalidate">
+                            <label id="show-label" for="show">Show</label>
+                            <input id="show-input" type="text" name="show" placeholder="Name of show you saw" required>
+                        </div>
+                        <div class="form-group" data-bs-toggle="tooltip" data-bs-placement="top" title="If you don't know the exact date, please enter the 1st of the month">
+                            <label id="date" for="date">Date</label>
+                            <input id="date" type="date" name="date" placeholder="Enter the date you saw the show">
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Where Did I See the Show?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="showLocation" id="broadway" value="Broadway" checked>
+                                <label class="form-check-label" for="broadway" value="Broadway">Broadway</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="showLocation" id="off-broadway" value="Off-Broadway">
+                                <label class="form-check-label" for="off-broadway">Off-Broadway</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="showLocation" id="west-end" value="West End">
+                                <label class="form-check-label" for="west-end">West End</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="showLocation" id="paper-mill" value="Paper Mill Playhouse">
+                                <label class="form-check-label" for="paper-mill">Paper Mill Playhouse</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="showLocation" id="other" value="Other">
+                                <label class="form-check-label" for="other">Other</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col form-group">
+                                <label class="slider-label" for="criteria">
+                                    <input class="sliders" id="songs" type="range" min="1" max="10" step="1" name="songs" value="1">Quality of Songs/Dialogue
+                                </label>
+                                <label class="slider-label" for="criteria">
+                                    <input class="sliders" id="plot" type="range" min="1" max="10" step="1" name="plot" value="1">Quality of the Plot
+                                </label>
+                                <label class="slider-label for="criteria">
+                                    <input class="sliders" id="cast" type="range" min="1" max="10" step="1" name="cast" value="1">Quality of the Cast
+                                </label>
+                                <label class="slider-label for="criteria">
+                                    <input class="sliders" id="bored" type="range" min="1" max="10" step="1" name="bored" value="1">Amount My Attention was Held
+                                </label>
+                                <label for="criteria">
+                                    <input id="total" type="text" name="total" value="" readonly>Total
+                                </label>
+                            </div>
+                            <div class="col form-group">
+                                <label class="slider-label for="criteria">
+                                    <input class="sliders" id="tech" type="range" min="1" max="10" step="1" name="tech" value="1">Technical Effects
+                                </label>
+                                <label class="slider-label for="criteria">
+                                    <input class="sliders" id="originality" type="range" min="1" max="10" step="1" name="originality" value="1">Originality of the Show
+                                </label>
+                                <label class="slider-label for="criteria">
+                                    <input class="sliders" id="memorability" type="range" min="1" max="10" step="1" name="memorability" value="1">Memorability of the Performance
+                                </label>
+                                <label class="slider-label for="criteria">
+                                    <input class="sliders" id="gut" type="range" min="1" max="10" step="1" name="gut" value="1">Gut Feeling
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button class="btn" id="new-show-submit" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col">
+                <div id="all-shows">
+                    <h3>Show Rankings</h3>
+                    <ol id="list"></ol>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="/static/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>

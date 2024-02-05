@@ -1,0 +1,65 @@
+#heading{
+    text-align: center;
+    background-color: #eadb5a;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+}
+
+#login-screen {
+    background-color: #eadb5a;
+}
+
+#login-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    padding-top: 25px;
+}
+
+#login-submit {
+    display: flex;
+    justify-content: center!important;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+#date {
+    width: 50%;
+}
+
+.radio{
+    display: inline
+}
+
+.slider-label{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.sliders{
+    width: 50%;
+}
+
+#ratings {
+    display: flex;
+}
+
+#total{
+    width: 10%;
+    margin: 10px;
+}
+
+#new-show-submit {
+    width: 25%;
+    background-color: #eadb5a;
+}
